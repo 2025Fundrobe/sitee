@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, HeartHandshake } from 'lucide-react';
+import { Menu, X, HeartHandshake, Home } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,6 +21,12 @@ export function Navbar() {
   };
 
   const navItems = [
+    {
+      label: 'Home',
+      path: '/',
+      icon: Home,
+      isShimmering: true
+    },
     { 
       label: 'About Us', 
       path: '/about',
@@ -107,8 +113,9 @@ export function Navbar() {
                   </div>
                 ) : item.isShimmering ? (
                   <>
-                    <span className="relative z-10 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-[length:200%_100%] animate-gradient bg-clip-text text-transparent font-semibold">
-                      {item.label}
+                    <span className="relative z-10 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-[length:200%_100%] animate-gradient bg-clip-text text-transparent font-semibold flex items-center space-x-1">
+                      {item.icon && <item.icon className="w-4 h-4 mr-1" />}
+                      <span>{item.label}</span>
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 opacity-20 blur-lg group-hover:opacity-30 transition-opacity" />
                   </>
