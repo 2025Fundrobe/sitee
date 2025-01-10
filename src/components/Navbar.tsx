@@ -171,7 +171,7 @@ export function Navbar() {
                   item.isSpecial
                     ? 'text-amber-400 hover:bg-white/10'
                     : item.isPurple
-                    ? 'text-purple-501 hover:bg-white/10'
+                    ? 'text-purple-500 hover:bg-white/10'
                     : item.isShimmering
                     ? 'bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-clip-text text-transparent font-semibold'
                     : 'text-white hover:bg-white/10'
