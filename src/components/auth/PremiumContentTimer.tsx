@@ -37,11 +37,11 @@ export function PremiumContentTimer() {
     // Reset modal state on route change
     setShowModal(false);
 
-    // Show modal after 5 seconds if not authenticated and on blog pages
+    // Show modal after 20 seconds if not authenticated and on blog pages
     if (!isAuthenticated && (location.pathname === '/blog' || location.pathname.startsWith('/blog/'))) {
       const timer = setTimeout(() => {
         setShowModal(true);
-      }, 5000);
+      }, 20000);
       return () => clearTimeout(timer);
     }
 
