@@ -2,12 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { X, ArrowLeft, Briefcase, Rocket, DollarSign, BookOpen, ChevronRight, HeartHandshake, Send } from 'lucide-react';
 
-interface Message {
-  content: string;
-  isBot: boolean;
-  timestamp: Date;
-}
-
 const menuOptions = [
   {
     icon: Rocket,
@@ -147,12 +141,12 @@ export function ChatBot() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 p-4 bg-[#5de0e6] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50"
+        className="fixed bottom-6 right-6 p-2 bg-[#5de0e6] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50"
       >
         <img 
           src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
           alt="Fundy AI"
-          className="w-6 h-6 group-hover:scale-110 transition-transform"
+          className="w-10 h-10 group-hover:scale-110 transition-transform"
         />
       </button>
     );
@@ -160,13 +154,15 @@ export function ChatBot() {
 
   return (
     <div className="fixed bottom-6 right-2 sm:right-6 w-[90vw] sm:w-96 h-[80vh] sm:h-[600px] bg-gray-50 rounded-2xl shadow-2xl flex flex-col z-50 max-w-[360px] ml-auto mr-2 sm:mr-0">
-      <div className="p-4 bg-[#5de0e6] text-white rounded-t-2xl flex items-center justify-between">
+      <div className="p-2 bg-[#5de0e6] text-white rounded-t-2xl flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <img 
-            src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
-            alt="Fundy AI"
-            className="w-6 h-6"
-          />
+          <div className="p-1">
+            <img 
+              src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+              alt="Fundy AI"
+              className="w-10 h-10"
+            />
+          </div>
           <span className="font-medium">Fundy AI</span>
         </div>
         <button onClick={() => setIsOpen(false)} className="p-1 hover:bg-white/20 rounded-full">
