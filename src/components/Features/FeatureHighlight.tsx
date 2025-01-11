@@ -11,7 +11,7 @@ export function FeatureHighlight({ icon: Icon, title, description }: FeatureHigh
   return (
     <div className="relative group">
       {/* Animated gradient background */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-600 to-blue-400 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient bg-[length:200%_auto]" />
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#5de0e6] to-[#4bc5cb] rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-gradient bg-[length:200%_auto]" />
       
       {/* Card content */}
       <div className="relative bg-white rounded-2xl p-8 shadow-xl transition-all duration-300 hover:shadow-2xl">
