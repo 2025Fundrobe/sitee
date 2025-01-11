@@ -2,7 +2,7 @@ import React from 'react';
 import { StepCard } from './StepCard';
 import { steps } from './stepsData';
 import { AnimatedProcess } from './AnimatedProcess';
-import { HowItWorksBackground } from './HowItWorksBackground';
+import { HowItWorksBackground } from './HowItWorksBackground.1';
 
 export function HowItWorks() {
   return (

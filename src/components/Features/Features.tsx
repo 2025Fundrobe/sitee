@@ -21,78 +21,52 @@ export function Features() {
   return (
     <SectionBackground className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        {/* Enhanced 3D Gradient Background */}
-        <div className="absolute inset-0 overflow-hidden">
-          {/* Primary gradient layer */}
-          <div 
-            className="absolute inset-0 bg-gradient-to-br from-[#5de0e6]/20 via-blue-400/15 to-[#4bc5cb]/20 animate-gradient"
-            style={{
-              transform: 'perspective(1000px) rotateX(10deg)',
-              backgroundSize: '200% 200%',
-            }}
-          />
-          {/* Secondary gradient layer */}
-          <div 
-            className="absolute inset-0 bg-gradient-to-tr from-[#5de0e6]/15 via-transparent to-blue-400/15 animate-gradient"
-            style={{
-              transform: 'perspective(1000px) rotateY(5deg)',
-              backgroundSize: '200% 200%',
-              animationDelay: '1s',
-            }}
-          />
-          {/* Highlight layer */}
-          <div 
-            className="absolute inset-0 bg-gradient-to-r from-white/5 via-transparent to-white/5 animate-gradient"
-            style={{
-              transform: 'perspective(1000px) rotateZ(2deg)',
-              backgroundSize: '200% 200%',
-              animationDelay: '2s',
-            }}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Cost-Free Funding Year-Round
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Join thousands of programs that have transformed their fundraising with our all-inclusive platform, featuring <strong>fundraising news, tips, and a personalized merchandise store</strong>.
+          </p>
+        </div>
+        
+        <div className="max-w-3xl mx-auto mb-16">
+          <FeatureHighlight 
+            icon={Calendar}
+            title="Year-Round Revenue"
+            description="Unlike traditional one-time events, Fundrobe provides continuous passive income through customized spirit wear sales, supporting your program's needs throughout the entire year."
           />
         </div>
 
-        <div className="relative">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              What Do We Mean By Cost-Free Funding Year-Round?
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Join thousands of school programs just like yours that have transformed their fundraising 
-              with our Multi-Use platform including <strong className="underline"><u>fundraising news, tips, and updates throughout the week, and of course our all inclusive fund-all-year personalized merchandise fundraising platform</u></strong>!
-            </p>
-          </div>
-          
-          <div className="max-w-3xl mx-auto mb-16">
-            <FeatureHighlight 
-              icon={Calendar}
-              title="Year-Round Fundraising Solution"
-              description="Transform your fundraising with our continuous revenue stream. Unlike traditional one-time events, Fundrobe provides year-long passive income through customized spirit wear sales, supporting your school's needs throughout the entire academic year."
-            />
-          </div>
+        <div className="grid md:grid-cols-2 gap-12 mb-16">
+          <FeatureCard 
+            icon={<DollarSign className="w-8 h-8 text-[#5de0e6]" />}
+            title="No Upfront Cost"
+            description="Launch your fundraising campaign without any monetary investment. We handle all production and shipping costs."
+          />
+          <FeatureCard 
+            icon={<Truck className="w-8 h-8 text-[#5de0e6]" />}
+            title="Full-Service Solution"
+            description="We handle everything from design to delivery, including production, shipping, and customer service. You focus on your program while we manage the rest."
+            bulletPoints={[
+              "Custom design creation",
+              "Production management",
+              "Order fulfillment",
+              "Customer support",
+              "Shipping logistics"
+            ]}
+          />
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-12 mb-16">
-            <FeatureCard 
-              icon={<DollarSign className="w-8 h-8 text-[#5de0e6]" />}
-              title="No Upfront Cost"
-              description="Launch your fundraising campaign without any monetary investment from you. All we need is some of your time so we can have our designers create something absolutely one of a kind!"
+        <div className="grid md:grid-cols-2 gap-8">
+          {additionalFeatures.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={<feature.icon className="w-8 h-8 text-[#5de0e6]" />}
+              title={feature.title}
+              description={feature.description}
             />
-            <FeatureCard 
-              icon={<Truck className="w-8 h-8 text-[#5de0e6]" />}
-              title="Full-Service Solution"
-              description="We handle everything from production to delivery, letting you focus on what matters most."
-            />
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {additionalFeatures.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={<feature.icon className="w-8 h-8 text-[#5de0e6]" />}
-                title={feature.title}
-                description={feature.description}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </SectionBackground>
