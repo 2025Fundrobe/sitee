@@ -55,7 +55,7 @@ export function Hero() {
             </div>
             
             <p className="text-lg sm:text-xl text-blue-100 max-w-xl mx-auto md:mx-0">
-              Need to fund your next game? Get Started Before The Other Team Does...
+            Fundraising for school programs for as cheap as it gets, Free.
             </p>
             
             <div className="hidden md:block">
