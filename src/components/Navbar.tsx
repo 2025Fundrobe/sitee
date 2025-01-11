@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, HeartHandshake, Home } from 'lucide-react';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,13 @@ export function Navbar() {
   }, []);
 
   const handleSupportClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleLogoClick = () => {
+    if (location.pathname !== '/') {
+      navigate('/');
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -63,11 +71,11 @@ export function Navbar() {
 
   return (
     <nav className="fixed top-4 left-0 right-0 z-50">
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-2 sm:px-4">
         <div className={`relative flex items-center justify-between rounded-full transition-all duration-300 ${
           isScrolled 
-            ? 'bg-white/20 backdrop-blur-lg shadow-lg border border-white/20 py-2 px-6' 
-            : 'bg-transparent py-2 px-6'
+            ? 'bg-white/20 backdrop-blur-lg shadow-lg border border-white/20 py-2 px-3 sm:px-6' 
+            : 'bg-transparent py-2 px-3 sm:px-6'
         }`}>
           {/* Mobile Menu Button */}
           <button 
@@ -82,10 +90,13 @@ export function Navbar() {
             <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 opacity-20 blur-lg group-hover:opacity-30 transition-opacity" />
           </button>
 
-          {/* Logo/Text - Centered on mobile */}
-          <div className="flex items-center justify-center space-x-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-0 md:transform-none">
+          {/* Logo and Brand */}
+          <div className="flex items-center">
             {/* Desktop Logo */}
-            <div className="md:block hidden relative">
+            <div 
+              className="hidden md:block relative cursor-pointer group"
+              onClick={handleLogoClick}
+            >
               <img 
                 src="https://i.im.ge/2025/01/06/zp6jNc.Animated-Fundrobe-Logo-2.png"
                 alt="Fundrobe Logo"
@@ -95,13 +106,15 @@ export function Navbar() {
               <div className="absolute inset-0 bg-blue-400 opacity-30 blur-3xl group-hover:opacity-60 transition-all duration-300" />
               <div className="absolute inset-[-50%] bg-[#5de0e6] opacity-20 blur-3xl animate-pulse" />
             </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-[#5de0e6] to-[#4bc5cb] bg-clip-text text-transparent">
+            
+            {/* Brand Text */}
+            <span className="md:ml-5 text-xl font-bold bg-gradient-to-r from-[#5de0e6] to-[#4bc5cb] bg-clip-text text-transparent">
               Fundrobe
             </span>
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 -translate-x-6">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -144,7 +157,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Get Started Button - Hidden on mobile */}
+          {/* Get Started Button */}
           <div className="hidden md:flex items-center">
             <button 
               onClick={handleGetStarted}
@@ -155,11 +168,14 @@ export function Navbar() {
           </div>
 
           {/* Mobile Logo */}
-          <div className="md:hidden flex items-center">
+          <div 
+            className="md:hidden flex items-center cursor-pointer"
+            onClick={handleLogoClick}
+          >
             <img 
               src="https://i.im.ge/2025/01/06/zp6jNc.Animated-Fundrobe-Logo-2.png"
               alt="Fundrobe Logo"
-              className="h-6 w-auto"
+              className="h-8 w-auto"
             />
           </div>
         </div>
