@@ -14,6 +14,12 @@ import { Donate } from './pages/Donate';
 import { LoadingScreen } from './components/common/LoadingScreen';
 import { CursorShine } from './components/common/CursorShine';
 import { ChatBot } from './components/chat/ChatBot';
+import { useScrollToTop } from './hooks/useScrollToTop';
+
+function ScrollToTop() {
+  useScrollToTop();
+  return null;
+}
 
 export default function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +38,7 @@ export default function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-white">
         <CursorShine />
         <Navbar />

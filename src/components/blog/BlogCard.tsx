@@ -16,7 +16,7 @@ export function BlogCard({ post, onClick }: BlogCardProps) {
 
   return (
     <div 
-      className="bg-white rounded-xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+      className="bg-white rounded-xl overflow-hidden shadow-lg group hover:-translate-y-1 transition-all duration-300 cursor-pointer h-full flex flex-col"
       onClick={onClick}
     >
       <div className="aspect-w-16 aspect-h-9 relative">
@@ -32,7 +32,7 @@ export function BlogCard({ post, onClick }: BlogCardProps) {
           </div>
         )}
       </div>
-      <div className="p-6">
+      <div className="p-6 flex-1 flex flex-col">
         <div className="flex items-center text-sm text-gray-500 mb-4">
           <span className="flex items-center mr-4">
             <User className="w-4 h-4 mr-2" />
@@ -46,12 +46,14 @@ export function BlogCard({ post, onClick }: BlogCardProps) {
         <h3 className="text-xl font-bold text-gray-900 mb-2">
           {post.title}
         </h3>
-        <p className="text-gray-600 mb-6">
+        <p className="text-gray-600 mb-6 flex-1">
           {post.excerpt}
         </p>
-        <div className="inline-flex items-center px-4 py-2 rounded-lg border-2 border-[#5de0e6] text-[#5de0e6] group-hover:bg-[#5de0e6] group-hover:text-white transition-all duration-300">
-          Read More
-          <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-all duration-300" />
+        <div className="mt-auto">
+          <div className="inline-flex items-center px-4 py-2 rounded-lg border-2 border-[#5de0e6] text-[#5de0e6] group-hover:bg-[#5de0e6] group-hover:text-white transition-all duration-300">
+            Read More
+            <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-all duration-300" />
+          </div>
         </div>
       </div>
     </div>

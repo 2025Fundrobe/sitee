@@ -37,16 +37,52 @@ export function Support() {
       <div className="min-h-screen bg-gradient-to-br from-purple-700 via-purple-600 to-purple-800">
         <div className="pt-32 pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Header Box */}
+            <div className="relative mb-16">
+              {/* Enhanced background glow */}
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-500 via-purple-600 to-purple-500 blur-lg opacity-50 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-400/30 via-purple-300/20 to-purple-400/30 blur-xl" />
+              <div className="absolute inset-0 bg-gradient-to-tl from-purple-400/20 via-white/30 to-purple-400/20 blur-2xl" />
+              
+              <div className="relative bg-gradient-to-r from-purple-500 via-purple-600 to-purple-500 p-1 rounded-2xl">
+                <div className="bg-transparent backdrop-blur-sm px-8 py-4 rounded-xl">
+                  <div className="flex items-center justify-center space-x-6">
+                    <div className="relative">
+                      <img 
+                        src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+                        alt="Fundy Mascot"
+                        className="w-24 h-24 object-contain animate-bounce-slow relative z-10"
+                      />
+                      <div className="absolute -bottom-4 left-4 w-16 h-4 bg-black/20 rounded-full blur-sm animate-bounce-slow transform -skew-x-12"></div>
+                    </div>
+                    <h1 className="text-4xl md:text-5xl font-bold relative">
+                      {/* Base text */}
+                      <span className="text-white relative">
+                        Instructor Support
+                      </span>
+
+                      {/* Static shine effect */}
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-30 blur-sm" />
+                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-20 blur-md" />
+
+                      {/* Neon underline */}
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-purple-300 via-white to-purple-300 animate-pulse shadow-[0_0_15px_#9333ea,0_0_30px_#9333ea,0_0_45px_#9333ea]" />
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-purple-300 via-white to-purple-300 blur-[3px] animate-pulse opacity-95" />
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-purple-300 via-white to-purple-300 blur-[6px] animate-pulse opacity-90" />
+                    </h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="text-center mb-16">
-              <AnimatedHeader as="h1" className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Get in Touch
-              </AnimatedHeader>
               <p className="text-xl text-purple-100 max-w-3xl mx-auto">
                 Ready to transform your school's fundraising? We're here to help you get started 
                 and answer any questions you may have.
               </p>
             </div>
 
+            {/* Rest of the content remains unchanged */}
             <div className="grid lg:grid-cols-2 gap-12 mb-20">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 shadow-xl border border-white/20">
                 <ContactForm />

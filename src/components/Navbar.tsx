@@ -69,8 +69,23 @@ export function Navbar() {
             ? 'bg-white/20 backdrop-blur-lg shadow-lg border border-white/20 py-2 px-6' 
             : 'bg-transparent py-2 px-6'
         }`}>
-          <Link to="/" className="flex items-center space-x-4 group">
-            <div className="relative">
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden relative group"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6 text-[#5de0e6] animate-gradient bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-clip-text" />
+            ) : (
+              <Menu className="w-6 h-6 text-[#5de0e6] animate-gradient bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-clip-text" />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 opacity-20 blur-lg group-hover:opacity-30 transition-opacity" />
+          </button>
+
+          {/* Logo/Text - Centered on mobile */}
+          <div className="flex items-center justify-center space-x-4 absolute left-1/2 transform -translate-x-1/2 md:relative md:left-0 md:transform-none">
+            {/* Desktop Logo */}
+            <div className="md:block hidden relative">
               <img 
                 src="https://i.im.ge/2025/01/06/zp6jNc.Animated-Fundrobe-Logo-2.png"
                 alt="Fundrobe Logo"
@@ -83,7 +98,7 @@ export function Navbar() {
             <span className="text-xl font-bold bg-gradient-to-r from-[#5de0e6] to-[#4bc5cb] bg-clip-text text-transparent">
               Fundrobe
             </span>
-          </Link>
+          </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -129,19 +144,7 @@ export function Navbar() {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden relative group"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-[#5de0e6] animate-gradient bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-clip-text" />
-            ) : (
-              <Menu className="w-6 h-6 text-[#5de0e6] animate-gradient bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 bg-clip-text" />
-            )}
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-[#5de0e6] to-blue-400 opacity-20 blur-lg group-hover:opacity-30 transition-opacity" />
-          </button>
-
+          {/* Get Started Button - Hidden on mobile */}
           <div className="hidden md:flex items-center">
             <button 
               onClick={handleGetStarted}
@@ -149,6 +152,15 @@ export function Navbar() {
             >
               Get Started
             </button>
+          </div>
+
+          {/* Mobile Logo */}
+          <div className="md:hidden flex items-center">
+            <img 
+              src="https://i.im.ge/2025/01/06/zp6jNc.Animated-Fundrobe-Logo-2.png"
+              alt="Fundrobe Logo"
+              className="h-6 w-auto"
+            />
           </div>
         </div>
 
