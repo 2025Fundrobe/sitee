@@ -7,6 +7,7 @@ import { AboutBrand } from '../components/AboutBrand';
 import { BrandPartners } from '../components/BrandPartners';
 import { DonateSection } from '../components/DonateSection';
 import { Footer } from '../components/Footer/Footer';
+import { FAQ } from '../components/FAQ';
 
 export function Home() {
   return (
@@ -14,6 +15,7 @@ export function Home() {
       <Hero />
       <BrandPartners />
       <HowItWorks />
+      <FAQ />
       <Features />
       <Testimonials />
       <DonateSection />
