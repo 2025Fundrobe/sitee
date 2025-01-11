@@ -29,11 +29,21 @@ export function TestimonialCard({ quote, author, role, schoolName, imageUrl }: T
       )}
       <div className="flex items-center space-x-4 mb-6">
         <div className={`relative ${isMilitary ? 'p-1 bg-[#5A6324] rounded-full' : ''}`}>
-          <img
-            src={imageUrl}
-            alt={author}
-            className="w-16 h-16 rounded-full object-cover"
-          />
+          {/* Decorative Frame */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[84px] h-[84px]">
+            <img
+              src="https://i.postimg.cc/cC8ckDzM/F-7.png"
+              alt=""
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="relative z-10 w-16 h-16 rounded-full overflow-hidden">
+            <img
+              src={imageUrl}
+              alt={author}
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
         <div>
           <h4 className={`font-semibold ${isMilitary ? 'text-[#D4D6A7]' : 'text-gray-900'}`}>
