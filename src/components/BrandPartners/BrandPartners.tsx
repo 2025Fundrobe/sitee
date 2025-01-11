@@ -89,4 +89,3 @@ export function BrandPartners() {
     </section>
   );
 }
-}
