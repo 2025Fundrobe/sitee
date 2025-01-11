@@ -15,24 +15,53 @@ export function SuccessStories() {
     <>
       <SectionBackground className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-block relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-lg opacity-50 animate-pulse" />
-              <div className="relative bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 p-1 rounded-2xl">
-                <div className="bg-white px-8 py-4 rounded-xl">
-                  <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-amber-500 to-yellow-500 bg-clip-text text-transparent">
-                    Success Stories
-                  </h1>
+          {/* Gold Box Section */}
+          <div className="relative mb-16">
+            <div className="absolute inset-0 bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-lg opacity-50 animate-pulse" />
+            <div className="relative bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 p-1 rounded-2xl">
+              <div className="bg-white px-8 py-12 rounded-xl">
+                <div className="text-center">
+                  <div className="inline-block relative">
+                    <h1 className="text-4xl md:text-5xl font-bold relative">
+                      {/* Base text with gradient */}
+                      <span className="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent relative">
+                        Success Stories
+                      </span>
+
+                      {/* Shine effect overlay */}
+                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 blur-sm animate-shimmer" 
+                        style={{
+                          '--rotation': '25deg',
+                          maskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                          WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                        }}
+                      />
+
+                      {/* Additional shine layer */}
+                      <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 blur-md animate-shimmer delay-75"
+                        style={{
+                          '--rotation': '-15deg',
+                          maskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                          WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                        }}
+                      />
+
+                      {/* Neon underline */}
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 animate-pulse shadow-[0_0_15px_#fcd34d,0_0_30px_#fcd34d,0_0_45px_#fcd34d]" />
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[3px] animate-pulse opacity-95" />
+                      <span className="absolute -bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[6px] animate-pulse opacity-90" />
+                    </h1>
+                  </div>
+                  <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
+                    Discover how programs across the region have transformed their fundraising with Fundrobe
+                  </p>
+                </div>
+
+                <div className="mt-12">
+                  <StatsGrid />
                 </div>
               </div>
             </div>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6">
-              Discover how programs across the region have transformed their fundraising with Fundrobe
-            </p>
-          </div>
-
-          <div className="mb-16">
-            <StatsGrid />
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
