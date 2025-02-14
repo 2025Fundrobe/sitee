@@ -1,6 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { X, ArrowLeft, Briefcase, Rocket, DollarSign, BookOpen, ChevronRight, HeartHandshake, Send } from 'lucide-react';
+
+interface Message {
+  content: string;
+  isBot: boolean;
+  timestamp: Date;
+}
 
 const menuOptions = [
   {
@@ -42,7 +48,6 @@ export function ChatBot() {
   const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
-  const location = useLocation();
 
   useEffect(() => {
     if (messagesEndRef.current) {
