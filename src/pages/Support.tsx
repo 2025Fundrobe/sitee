@@ -1,11 +1,8 @@
-import React from 'react';
-import { SectionBackground } from '../components/common/SectionBackground';
 import { Footer } from '../components/Footer/Footer';
 import { HeartHandshake, MessageCircle, Clock, Users2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ContactForm } from '../components/contact/ContactForm';
 import { ContactInfo } from '../components/contact/ContactInfo';
-import { AnimatedHeader } from '../components/common/AnimatedHeader';
 import { FAQSection } from '../components/support/FAQSection';
 
 const features = [
@@ -49,7 +46,7 @@ export function Support() {
                   <div className="flex items-center justify-center space-x-6">
                     <div className="relative">
                       <img 
-                        src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+                        src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
                         alt="Fundy Mascot"
                         className="w-24 h-24 object-contain animate-bounce-slow relative z-10"
                       />

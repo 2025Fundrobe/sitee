@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SectionBackground } from '../components/common/SectionBackground';
 import { Footer } from '../components/Footer/Footer';

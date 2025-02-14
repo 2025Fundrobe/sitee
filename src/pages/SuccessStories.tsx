@@ -4,7 +4,7 @@ import { SectionBackground } from '../components/common/SectionBackground';
 import { StatsGrid } from '../components/Stats';
 import { DonateSection } from '../components/DonateSection';
 import { DonorsReel } from '../components/DonorsReel';
-import { ArrowRight, MapPin, School } from 'lucide-react';
+import { MapPin, School } from 'lucide-react';
 import { successStories } from '../data/successStories';
 import { Footer } from '../components/Footer/Footer';
 
@@ -21,47 +21,36 @@ export function SuccessStories() {
             <div className="relative bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 p-1 rounded-2xl">
               <div className="bg-white px-4 md:px-8 py-6 sm:py-12 rounded-xl">
                 <div className="text-center">
-                  <div className="flex flex-col items-center justify-center">
-                    {/* Fundy mascot - hidden on mobile */}
-                    <div className="relative hidden md:block mb-8">
-                      <img 
-                        src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
-                        alt="Fundy Mascot"
-                        className="w-24 h-24 object-contain animate-bounce-slow relative z-10"
+                  <div className="inline-block relative">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold relative pb-4 sm:pb-6">
+                      {/* Base text with gradient */}
+                      <span className="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent relative">
+                        Success Stories
+                      </span>
+
+                      {/* Shine effect overlay - hidden on mobile */}
+                      <span className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 blur-sm animate-shimmer" 
+                        style={{
+                          '--rotation': '25deg',
+                          maskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                          WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                        } as React.CSSProperties & { '--rotation': string }}
                       />
-                      <div className="absolute -bottom-4 left-4 w-16 h-4 bg-black/20 rounded-full blur-sm animate-bounce-slow transform -skew-x-12"></div>
-                    </div>
-                    <div className="inline-block relative">
-                      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold relative pb-4 sm:pb-6">
-                        {/* Base text with gradient */}
-                        <span className="bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent relative">
-                          Success Stories
-                        </span>
 
-                        {/* Shine effect overlay - hidden on mobile */}
-                        <span className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-30 blur-sm animate-shimmer" 
-                          style={{
-                            '--rotation': '25deg',
-                            maskImage: 'linear-gradient(to right, transparent, black, transparent)',
-                            WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
-                          }}
-                        />
+                      {/* Additional shine layer - hidden on mobile */}
+                      <span className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 blur-md animate-shimmer delay-75"
+                        style={{
+                          '--rotation': '-15deg',
+                          maskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                          WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
+                        } as React.CSSProperties & { '--rotation': string }}
+                      />
 
-                        {/* Additional shine layer - hidden on mobile */}
-                        <span className="hidden md:block absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-20 blur-md animate-shimmer delay-75"
-                          style={{
-                            '--rotation': '-15deg',
-                            maskImage: 'linear-gradient(to right, transparent, black, transparent)',
-                            WebkitMaskImage: 'linear-gradient(to right, transparent, black, transparent)',
-                          }}
-                        />
-
-                        {/* Neon underline */}
-                        <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 animate-pulse shadow-[0_0_15px_#fcd34d,0_0_30px_#fcd34d,0_0_45px_#fcd34d]" />
-                        <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[3px] animate-pulse opacity-95" />
-                        <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[6px] animate-pulse opacity-90" />
-                      </h1>
-                    </div>
+                      {/* Neon underline */}
+                      <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 animate-pulse shadow-[0_0_15px_#fcd34d,0_0_30px_#fcd34d,0_0_45px_#fcd34d]" />
+                      <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[3px] animate-pulse opacity-95" />
+                      <span className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-[4px] bg-gradient-to-r from-amber-300 via-yellow-400 to-amber-300 blur-[6px] animate-pulse opacity-90" />
+                    </h1>
                   </div>
                   <p className="text-xl text-gray-600 max-w-3xl mx-auto mt-6 sm:mt-12">
                     Discover how programs across the region have transformed their fundraising with Fundrobe
