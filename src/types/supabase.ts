@@ -46,6 +46,44 @@ export interface Database {
           image_url?: string
           published?: boolean
         }
+      },
+      TIPS: {
+        Row: {
+          id: string
+          created_at: string
+          title: string
+          slug: string
+          content: string
+          excerpt: string
+          author: string
+          category: string
+          image_url: string
+          published: boolean
+        }
+        Insert: {
+          id?: string
+          created_at?: string
+          title: string
+          slug: string
+          content: string
+          excerpt: string
+          author: string
+          category: string
+          image_url: string
+          published?: boolean
+        }
+        Update: {
+          id?: string
+          created_at?: string
+          title?: string
+          slug?: string
+          content?: string
+          excerpt?: string
+          author?: string
+          category?: string
+          image_url?: string
+          published?: boolean
+        }
       }
     }
   }
