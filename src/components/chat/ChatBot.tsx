@@ -158,7 +158,7 @@ export function ChatBot() {
         <div className="flex items-center space-x-2">
           <div className="p-1">
             <img 
-              src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+              src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
               alt="Fundy AI"
               className="w-10 h-10"
             />
