@@ -144,7 +144,7 @@ export function ChatBot() {
         className="fixed bottom-6 right-6 p-2 bg-[#5de0e6] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50"
       >
         <img 
-          src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+          src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
           alt="Fundy AI"
           className="w-10 h-10 group-hover:scale-110 transition-transform"
         />
