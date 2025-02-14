@@ -9,45 +9,45 @@ import { PremiumContentPopup } from '../components/blog/PremiumContentPopup';
 import { supabase } from '../lib/supabase';
 import type { Database } from '../types/supabase';
 
-type Post = Database['public']['Tables']['posts']['Row'];
+type Tip = Database['public']['Tables']['TIPS']['Row'];
 
 export function Blog() {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [tips, setTips] = useState<Tip[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [showPremiumPopup, setShowPremiumPopup] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
-    async function fetchPosts() {
+    async function fetchTips() {
       try {
         const { data, error } = await supabase
-          .from('posts')
+          .from('TIPS')
           .select('*')
           .eq('published', true)
           .order('created_at', { ascending: false });
 
         if (error) throw error;
-        setPosts(data || []);
+        setTips(data || []);
       } catch (error) {
-        console.error('Error fetching posts:', error);
-        setError('Unable to load posts. Please try again later.');
+        console.error('Error fetching tips:', error);
+        setError('Unable to load tips. Please try again later.');
       } finally {
         setLoading(false);
       }
     }
 
-    fetchPosts();
+    fetchTips();
   }, []);
 
-  const handlePostClick = async (post: Post) => {
+  const handleTipClick = async (tip: Tip) => {
     try {
       const { data: { session } } = await supabase.auth.getSession();
       
-      if (post.category === 'Fundraising Tips' && !session) {
+      if (tip.category === 'Fundraising Tips' && !session) {
         setShowPremiumPopup(true);
       } else {
-        navigate(`/blog/${post.slug}`);
+        navigate(`/blog/${tip.slug}`);
       }
     } catch (error) {
       console.error('Auth error:', error);
@@ -71,7 +71,7 @@ export function Blog() {
                   <div className="flex items-center justify-center space-x-6">
                     <div className="relative">
                       <img 
-                        src="https://i.ibb.co/hKRkZ6s/Untitled-design-11.png"
+                        src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
                         alt="Fundy Mascot"
                         className="w-24 h-24 object-contain animate-bounce-slow relative z-10"
                       />
@@ -117,7 +117,7 @@ export function Blog() {
               </div>
             ) : null}
 
-            <BlogList posts={posts} onPostClick={handlePostClick} />
+            <BlogList posts={tips} onPostClick={handleTipClick} />
           </div>
         </SectionBackground>
       </div>
