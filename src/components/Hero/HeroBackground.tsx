@@ -15,7 +15,6 @@ export function HeroBackground() {
       
       {/* Ambient Glow */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-[#5de0e6]/10 to-transparent" />
-      <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-gradient-to-tr from-[#5de0e6]/20 to-transparent" />
     </div>
   );
 }

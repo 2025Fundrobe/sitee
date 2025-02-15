@@ -84,6 +84,41 @@ export interface Database {
           image_url?: string
           published?: boolean
         }
+      },
+      success_stories: {
+        Row: {
+          id: string
+          created_at: string
+          title: string
+          high_school_name: string
+          instructor_name: string
+          amount_raised: string
+          content: string
+          image_url_1: string
+          image_url_2: string
+        }
+        Insert: {
+          id?: string
+          created_at?: string
+          title: string
+          high_school_name: string
+          instructor_name: string
+          amount_raised: string
+          content: string
+          image_url_1?: string
+          image_url_2?: string
+        }
+        Update: {
+          id?: string
+          created_at?: string
+          title?: string
+          high_school_name?: string
+          instructor_name?: string
+          amount_raised?: string
+          content?: string
+          image_url_1?: string
+          image_url_2?: string
+        }
       }
     }
   }

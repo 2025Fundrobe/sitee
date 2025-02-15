@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { SectionBackground } from '../components/common/SectionBackground';
@@ -104,27 +105,51 @@ export function SuccessStoryDetail() {
               </div>
 
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-xl font-bold text-gray-900 mb-4">Backstory</h2>
-                <p className="text-gray-600 mb-6">{story.sections.backstory}</p>
-                
-                <h2 className="text-xl font-bold text-gray-900 mb-4">The Challenge</h2>
-                <div className="text-gray-600 mb-6 whitespace-pre-line">
-                  {story.sections.challenge}
+                {/* Backstory Section */}
+                <div className="mb-12">
+                  <div className="relative bg-gradient-to-r from-[#5de0e6]/10 to-[#4bc5cb]/10 p-6 rounded-xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#5de0e6]/5 via-transparent to-[#4bc5cb]/5 animate-shimmer"></div>
+                    <p className="relative z-10 text-gray-700 leading-relaxed">
+                      {story.sections.backstory}
+                    </p>
+                  </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-900 mb-4">The Solution</h2>
-                <div className="text-gray-600 mb-6 whitespace-pre-line">
-                  {story.sections.solution}
+                {/* Challenge Section */}
+                <div className="mb-12">
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200">
+                    <div className="whitespace-pre-line text-gray-700">
+                      {story.sections.challenge}
+                    </div>
+                  </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-900 mb-4">The Results</h2>
-                <div className="text-gray-600 mb-6 whitespace-pre-line">
-                  {story.sections.results}
+                {/* Solution Section */}
+                <div className="mb-12">
+                  <div className="bg-gradient-to-r from-[#5de0e6]/5 to-[#4bc5cb]/5 p-6 rounded-xl">
+                    <div className="whitespace-pre-line text-gray-700">
+                      {story.sections.solution}
+                    </div>
+                  </div>
                 </div>
 
-                <h2 className="text-xl font-bold text-gray-900 mb-4">Moving Forward</h2>
-                <div className="text-gray-600 mb-6 whitespace-pre-line">
-                  {story.sections.movingForward}
+                {/* Results Section */}
+                <div className="mb-12">
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200">
+                    <div className="whitespace-pre-line text-gray-700">
+                      {story.sections.results}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Moving Forward Section */}
+                <div className="mb-12">
+                  <div className="relative bg-gradient-to-r from-[#5de0e6]/10 to-[#4bc5cb]/10 p-6 rounded-xl overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#5de0e6]/5 via-transparent to-[#4bc5cb]/5 animate-shimmer"></div>
+                    <div className="relative z-10 whitespace-pre-line text-gray-700">
+                      {story.sections.movingForward}
+                    </div>
+                  </div>
                 </div>
 
                 {/* I'M NEXT Button */}

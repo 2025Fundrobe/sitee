@@ -19,14 +19,14 @@ const additionalFeatures = [
 
 export function Features() {
   return (
-    <SectionBackground className="py-20">
+    <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57e3f7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Cost-Free Funding Year-Round
+          <h2 className="text-5xl font-bold mb-4" style={{ color: '#57c3e7' }}>
+            Need Program Funding All Year?
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Join thousands of programs that have transformed their fundraising with our all-inclusive platform, featuring <strong>fundraising news, tips, and a personalized merchandise store</strong>.
+            Join thousands who have funded their programs <u>without school funding</u> with our <strong>all-in-one platform, offering news, tips, and a custom merchandise store.</strong>.
           </p>
         </div>
         
@@ -48,13 +48,6 @@ export function Features() {
             icon={<Truck className="w-8 h-8 text-[#5de0e6]" />}
             title="Full-Service Solution"
             description="We handle everything from design to delivery, including production, shipping, and customer service. You focus on your program while we manage the rest."
-            bulletPoints={[
-              "Custom design creation",
-              "Production management",
-              "Order fulfillment",
-              "Customer support",
-              "Shipping logistics"
-            ]}
           />
         </div>
 

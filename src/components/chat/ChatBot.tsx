@@ -146,7 +146,7 @@ export function ChatBot() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 p-2 bg-[#5de0e6] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50"
+        className="fixed bottom-6 right-6 p-2 bg-[#57c3e7] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50 shine-effect"
       >
         <img 
           src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
@@ -159,7 +159,7 @@ export function ChatBot() {
 
   return (
     <div className="fixed bottom-6 right-2 sm:right-6 w-[90vw] sm:w-96 h-[80vh] sm:h-[600px] bg-gray-50 rounded-2xl shadow-2xl flex flex-col z-50 max-w-[360px] ml-auto mr-2 sm:mr-0">
-      <div className="p-2 bg-[#5de0e6] text-white rounded-t-2xl flex items-center justify-between">
+      <div className="p-2 bg-[#57c3e7] text-white rounded-t-2xl flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <div className="p-1">
             <img 
@@ -184,7 +184,7 @@ export function ChatBot() {
             <div className={`max-w-[80%] ${
               message.isBot 
                 ? 'bg-white' 
-                : 'bg-[#5de0e6] text-white'
+                : 'bg-[#57c3e7] text-white'
               } rounded-2xl px-4 py-2 shadow-sm`}
             >
               <p className="text-sm">{message.content}</p>
@@ -204,14 +204,14 @@ export function ChatBot() {
                 onClick={() => handleOptionClick(option)}
                 className="w-full bg-white p-3 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center space-x-3 group"
               >
-                <div className="p-2 bg-[#5de0e6]/10 rounded-lg group-hover:bg-[#5de0e6]/20">
-                  <option.icon className="w-5 h-5 text-[#5de0e6]" />
+                <div className="p-2 bg-[#57c3e7]/10 rounded-lg group-hover:bg-[#57c3e7]/20">
+                  <option.icon className="w-5 h-5 text-[#57c3e7]" />
                 </div>
                 <div className="flex-1 text-left">
                   <div className="font-medium text-gray-900">{option.title}</div>
                   <div className="text-sm text-gray-500">{option.description}</div>
                 </div>
-                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#5de0e6]" />
+                <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#57c3e7]" />
               </button>
             ))}
           </div>
@@ -222,7 +222,7 @@ export function ChatBot() {
         {!showMenu && (
           <button
             onClick={() => setShowMenu(true)}
-            className="flex items-center text-[#5de0e6] hover:text-[#4bc5cb] mb-4"
+            className="flex items-center text-[#57c3e7] hover:text-[#4bc5cb] mb-4"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Menu
@@ -234,12 +234,12 @@ export function ChatBot() {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your message..."
-            className="flex-1 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-[#5de0e6] focus:ring-2 focus:ring-[#5de0e6]/20"
+            className="flex-1 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-[#57c3e7] focus:ring-2 focus:ring-[#57c3e7]/20"
           />
           <button
             onClick={handleSendMessage}
             disabled={!inputValue.trim()}
-            className="p-2 rounded-full bg-[#5de0e6] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors"
+            className="p-2 rounded-full bg-[#57c3e7] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors"
           >
             <Send className="w-5 h-5" />
           </button>

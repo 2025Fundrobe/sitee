@@ -1,13 +1,58 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { SectionBackground } from '../components/common/SectionBackground';
-import { StatsGrid } from '../components/Stats';
-import { DonateSection } from '../components/DonateSection';
-import { successStories } from '../data/successStories';
-import { Footer } from '../components/Footer/Footer';
+import { SectionBackground } from './common/SectionBackground';
+import { StatsGrid } from './Stats';
+import { DonateSection } from './DonateSection';
+import { DonorsReel } from './DonorsReel';
+import { MapPin, School } from 'lucide-react';
+import { fetchSuccessStories } from '../lib/supabase';
+import { Footer } from './Footer/Footer';
+
+interface SuccessStory {
+  id: number;
+  title: string;
+  school: string;
+  location: string;
+  raised: string;
+  imageUrl: string;
+  instructorImage: string;
+  sections: {
+    backstory: string;
+    challenge: string;
+    solution: string;
+    results: string;
+    movingForward: string;
+  };
+}
 
 export function SuccessStories() {
   const navigate = useNavigate();
+  const [stories, setStories] = useState<SuccessStory[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const getStories = async () => {
+      try {
+        const data = await fetchSuccessStories();
+        // Filter out "Orchestra Harmony" and "Drama Club Productions"
+        const filteredData = data.filter(
+          (story: SuccessStory) =>
+            story.title !== "Orchestra Harmony" && story.title !== "Drama Club Productions"
+        );
+        setStories(filteredData);
+      } catch (error) {
+        console.error('Error fetching success stories:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    getStories();
+  }, []);
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <>
@@ -63,13 +108,13 @@ export function SuccessStories() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
-            {successStories.map((story) => {
+            {stories.map((story) => {
               const [location, instructor] = story.location.split(' - ');
 
               return (
                 <div 
                   key={story.id}
-                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer group transform hover:-translate-y-2"
+                  className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
                   onClick={() => navigate(`/success/${story.id}`)}
                 >
                   <img
@@ -77,13 +122,18 @@ export function SuccessStories() {
                     alt={story.title}
                     className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {story.title}
                     </h3>
-                    <div className="flex flex-col space-y-2 items-center">
-                      <div className="text-gray-600">
-                        <span className="text-center">{story.school}</span>
+                    <div className="flex flex-col space-y-2">
+                      <div className="flex items-center text-gray-600">
+                        <School className="w-4 h-4 mr-2" />
+                        <span className="text-center flex-1">{story.school}</span>
+                      </div>
+                      <div className="flex items-center text-gray-600">
+                        <MapPin className="w-4 h-4 mr-2" />
+                        <span className="text-center flex-1">{location}</span>
                       </div>
                     </div>
                     <div className="mt-4 flex flex-col items-center space-y-3">
@@ -94,6 +144,13 @@ export function SuccessStories() {
                         {story.raised}
                       </div>
                     </div>
+                    <div className="mt-4">
+                      <p dangerouslySetInnerHTML={{ __html: story.sections.backstory }}></p>
+                      <p dangerouslySetInnerHTML={{ __html: story.sections.challenge }}></p>
+                      <p dangerouslySetInnerHTML={{ __html: story.sections.solution }}></p>
+                      <p dangerouslySetInnerHTML={{ __html: story.sections.results }}></p>
+                      <p dangerouslySetInnerHTML={{ __html: story.sections.movingForward }}></p>
+                    </div>
                   </div>
                 </div>
               );
@@ -102,6 +159,7 @@ export function SuccessStories() {
         </div>
       </SectionBackground>
       <DonateSection />
+      <DonorsReel />
       <Footer />
     </>
   );

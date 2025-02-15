@@ -34,12 +34,10 @@ export function Testimonials() {
   };
 
   return (
-    <SectionBackground className="py-20">
+    <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57c3e7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl font-bold text-center text-gray-900 mb-4 flex items-center justify-center">
-          <BeeIcon />
-          Most Recent Buzz On Fundrobe
-          <BeeIcon />
+        <h2 className="text-5xl font-bold text-center mb-4 flex items-center justify-center text-[#57c3e7]">
+        🐝Most Recent Buzz On Fundrobe🐝
         </h2>
         <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
           Join thousands of schools that have transformed their fundraising with Fundrobe

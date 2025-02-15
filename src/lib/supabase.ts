@@ -1,3 +1,4 @@
+// filepath: /c:/Users/J/Desktop/Site Clones/sitee/src/lib/supabase.ts
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from '../types/supabase';
 import { env } from '../config/env';
@@ -24,3 +25,13 @@ const createSupabaseClient = () => {
 };
 
 export const supabase = createSupabaseClient();
+
+export const fetchSuccessStories = async () => {
+  const { data, error } = await supabase
+    .from('success_stories')
+    .select('*');
+  if (error) {
+    throw new Error(error.message);
+  }
+  return data;
+};

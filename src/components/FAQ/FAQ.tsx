@@ -32,28 +32,9 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-12 relative overflow-hidden bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600">
-      {/* Animated background effects */}
-      <div className="absolute inset-0">
-        {/* Shimmering overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
-        
-        {/* Radial glow effects */}
-        <div className="absolute top-0 left-1/4 w-1/2 h-1/2 bg-blue-300/30 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-1/2 h-1/2 bg-blue-300/30 rounded-full blur-3xl animate-pulse delay-1000" />
-        
-        {/* Additional shine effects */}
-        {[...Array(3)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"
-            style={{
-              animationDelay: `${i * 0.5}s`,
-              transform: `rotate(${i * 15}deg)`,
-            }}
-          />
-        ))}
-      </div>
+    <section className="py-12 relative overflow-hidden bg-[#57c3e7]">
+      {/* Shimmering overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent animate-shimmer" />
 
       <div className="relative max-w-7xl mx-auto px-4">
         <div className="text-center mb-8">
@@ -70,7 +51,7 @@ export function FAQ() {
             {faqs.map((faq, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-gray-50 rounded-xl border border-[#57c3e7] shadow-sm hover:shadow-md transition-all duration-300"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -94,7 +75,7 @@ export function FAQ() {
                       : 'max-h-0 opacity-0'
                   } overflow-hidden`}
                 >
-                  <div className="px-4 pb-3 text-gray-600 text-sm border-t border-gray-200">
+                  <div className="px-4 pb-3 text-gray-600 text-sm border-t border-[#57c3e7]">
                     {faq.answer}
                   </div>
                 </div>

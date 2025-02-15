@@ -37,7 +37,7 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#5de0e6] py-8">
+    <footer className="bg-[#57c3e7] py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="flex items-center space-x-6">
@@ -58,7 +58,7 @@ export function Footer() {
             <Link to="/donate" className="text-gray-900 hover:text-white transition-colors">Donate</Link>
             <button 
               onClick={handleStartClick}
-              className="bg-white text-[#5de0e6] px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors"
+              className="bg-white text-[#57c3e7] px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors"
             >
               START
             </button>

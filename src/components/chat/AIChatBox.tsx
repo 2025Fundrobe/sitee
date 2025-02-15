@@ -62,7 +62,7 @@ export function AIChatBox() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 p-4 bg-[#5de0e6] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50"
+        className="fixed bottom-6 right-6 p-4 bg-[#57c3e7] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50 shine-effect"
       >
         <Bot className="w-6 h-6 text-white group-hover:scale-110 transition-transform" />
       </button>
@@ -79,7 +79,7 @@ export function AIChatBox() {
         isMinimized ? 'w-72' : 'w-96 h-full'
       }`}>
         {/* Header */}
-        <div className="bg-[#5de0e6] p-4 flex items-center justify-between">
+        <div className="bg-[#57c3e7] p-4 flex items-center justify-between">
           <div className="flex items-center space-x-2">
             <Bot className="w-6 h-6 text-white" />
             <span className="text-white font-medium">AI Assistant</span>
@@ -117,7 +117,7 @@ export function AIChatBox() {
                     className={`max-w-[80%] rounded-2xl px-4 py-2 ${
                       message.isBot
                         ? 'bg-gray-100'
-                        : 'bg-[#5de0e6] text-white'
+                        : 'bg-[#57c3e7] text-white'
                     }`}
                   >
                     <p className="text-sm">{message.content}</p>
@@ -142,13 +142,13 @@ export function AIChatBox() {
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
-                  className="flex-1 resize-none rounded-lg border border-gray-200 p-2 focus:outline-none focus:border-[#5de0e6] focus:ring-2 focus:ring-[#5de0e6]/20 max-h-32"
+                  className="flex-1 resize-none rounded-lg border border-gray-200 p-2 focus:outline-none focus:border-[#57c3e7] focus:ring-2 focus:ring-[#57c3e7]/20 max-h-32"
                   rows={1}
                 />
                 <button
                   onClick={handleSendMessage}
                   disabled={!inputValue.trim()}
-                  className="p-2 rounded-lg bg-[#5de0e6] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors"
+                  className="p-2 rounded-lg bg-[#57c3e7] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors"
                 >
                   <Send className="w-5 h-5" />
                 </button>
