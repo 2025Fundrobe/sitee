@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { X, ArrowLeft, Briefcase, Rocket, DollarSign, BookOpen, ChevronRight, HeartHandshake, Send } from 'lucide-react';
+import { ChatMessage } from './ChatMessage';
+import { ChatInput } from './ChatInput';
+import './ChatBot.css';
 
 interface Message {
   content: string;
@@ -45,7 +48,6 @@ export function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [showMenu, setShowMenu] = useState(true);
-  const [inputValue, setInputValue] = useState('');
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
 
@@ -121,16 +123,12 @@ export function ChatBot() {
     }, 500);
   };
 
-  const handleSendMessage = () => {
-    if (!inputValue.trim()) return;
-
+  const handleSendMessage = (message: string) => {
     setMessages(prev => [...prev, {
-      content: inputValue.trim(),
+      content: message,
       isBot: false,
       timestamp: new Date()
     }]);
-
-    setInputValue('');
 
     setTimeout(() => {
       setMessages(prev => [...prev, {
@@ -146,12 +144,12 @@ export function ChatBot() {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 p-2 bg-[#57c3e7] rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50 shine-effect"
+        className="fixed bottom-6 right-6 p-0 bg-transparent rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50 shine-effect"
       >
         <img 
           src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
           alt="Fundy AI"
-          className="w-10 h-10 group-hover:scale-110 transition-transform"
+          className="w-14 h-14 group-hover:scale-110 transition-transform"
         />
       </button>
     );
@@ -177,22 +175,7 @@ export function ChatBot() {
 
       <div className="flex-1 overflow-y-auto p-4">
         {messages.map((message, index) => (
-          <div
-            key={index}
-            className={`flex ${message.isBot ? 'justify-start' : 'justify-end'} mb-4`}
-          >
-            <div className={`max-w-[80%] ${
-              message.isBot 
-                ? 'bg-white' 
-                : 'bg-[#57c3e7] text-white'
-              } rounded-2xl px-4 py-2 shadow-sm`}
-            >
-              <p className="text-sm">{message.content}</p>
-              <span className="text-xs opacity-60 mt-1 block">
-                {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-              </span>
-            </div>
-          </div>
+          <ChatMessage key={index} content={message.content} isBot={message.isBot} timestamp={message.timestamp} />
         ))}
         <div ref={messagesEndRef} />
 
@@ -218,33 +201,7 @@ export function ChatBot() {
         )}
       </div>
 
-      <div className="p-4 border-t border-gray-100">
-        {!showMenu && (
-          <button
-            onClick={() => setShowMenu(true)}
-            className="flex items-center text-[#57c3e7] hover:text-[#4bc5cb] mb-4"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Menu
-          </button>
-        )}
-        <div className="flex items-center space-x-2">
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            placeholder="Type your message..."
-            className="flex-1 px-4 py-2 rounded-full border border-gray-200 focus:outline-none focus:border-[#57c3e7] focus:ring-2 focus:ring-[#57c3e7]/20"
-          />
-          <button
-            onClick={handleSendMessage}
-            disabled={!inputValue.trim()}
-            className="p-2 rounded-full bg-[#57c3e7] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors"
-          >
-            <Send className="w-5 h-5" />
-          </button>
-        </div>
-      </div>
+      <ChatInput onSendMessage={handleSendMessage} disabled={false} />
     </div>
   );
 }

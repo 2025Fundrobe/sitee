@@ -3,6 +3,7 @@ import { Calendar, DollarSign, Truck, Users, Palette } from 'lucide-react';
 import { FeatureCard } from './FeatureCard';
 import { FeatureHighlight } from './FeatureHighlight';
 import { SectionBackground } from '../common/SectionBackground';
+import './Features.css'; // Import the CSS file for the shine effect
 
 const additionalFeatures = [
   {
@@ -19,15 +20,17 @@ const additionalFeatures = [
 
 export function Features() {
   return (
-    <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57e3f7]">
+    <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57c3e7]"> {/* Updated outline color */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold mb-4" style={{ color: '#57c3e7' }}>
-            Need Program Funding All Year?
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Join thousands who have funded their programs <u>without school funding</u> with our <strong>all-in-one platform, offering news, tips, and a custom merchandise store.</strong>.
-          </p>
+          <div className="inline-block bg-white border-4 border-[#57c3e7] p-9 rounded-lg shadow-lg w-full max-w-5xl mx-auto shine-box"> {/* Updated outline color */}
+            <h2 className="text-5xl font-bold mb-4" style={{ color: '#000000' }}>
+              Need Funding All Year? ♻️
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Join thousands who have funded their programs <u>without school funding</u> with our <strong>all-in-one platform, offering news, tips, and a custom merchandise store.</strong>.
+            </p>
+          </div>
         </div>
         
         <div className="max-w-3xl mx-auto mb-16">

@@ -35,11 +35,11 @@ export function Navbar() {
       icon: Home,
       isShimmering: true
     },
-    { 
-      label: 'About Us', 
-      path: '/about',
-      isShimmering: true 
-    },
+    // { 
+    //   label: 'About Us', 
+    //   path: '/about',
+    //   isShimmering: true 
+    // },
     { 
       label: "Fundy's Tips", 
       path: '/blog',

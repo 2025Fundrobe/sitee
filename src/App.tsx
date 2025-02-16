@@ -42,18 +42,18 @@ export default function App() {
       <div className="min-h-screen bg-white">
         <CursorShine />
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/:slug" element={<BlogPost />} />
-          <Route path="/success" element={<SuccessStories />} />
-          <Route path="/success/:id" element={<SuccessStoryDetail />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
-          <Route path="/donate" element={<Donate />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            {/* <Route path="/about" element={<About />} /> */} {/* Commented out About page route */}
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/success" element={<SuccessStories />} />
+            <Route path="/success/:id" element={<SuccessStoryDetail />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/signin" element={<SignIn />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/donate" element={<Donate />} />
+          </Routes>
         <ChatBot />
       </div>
     </Router>

@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { SectionBackground } from './common/SectionBackground';
 import { StatsGrid } from './Stats';
 import { DonateSection } from './DonateSection';
-import { DonorsReel } from './DonorsReel';
 import { MapPin, School } from 'lucide-react';
 import { fetchSuccessStories } from '../lib/supabase';
 import { Footer } from './Footer/Footer';
@@ -159,7 +158,6 @@ export function SuccessStories() {
         </div>
       </SectionBackground>
       <DonateSection />
-      <DonorsReel />
       <Footer />
     </>
   );

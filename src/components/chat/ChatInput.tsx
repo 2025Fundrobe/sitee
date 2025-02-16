@@ -1,4 +1,5 @@
 import React, { useState, KeyboardEvent } from 'react';
+import { Send } from 'lucide-react';
 
 interface ChatInputProps {
   onSendMessage: (message: string) => void;
@@ -38,11 +39,7 @@ export function ChatInput({ onSendMessage, disabled }: ChatInputProps) {
         disabled={!message.trim() || disabled}
         className="p-2 rounded-full bg-[#5de0e6] text-white disabled:opacity-50 hover:bg-[#4bc5cb] transition-colors group relative"
       >
-        <img 
-          src="https://i.im.ge/2025/01/06/zp6jNc.Animated-Fundrobe-Logo-2.png"
-          alt="Send"
-          className="w-5 h-5 group-hover:scale-110 transition-transform"
-        />
+        <Send className="w-5 h-5 group-hover:scale-110 transition-transform" />
       </button>
     </div>
   );

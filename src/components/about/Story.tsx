@@ -12,7 +12,7 @@ export function Story() {
         <div className="prose prose-lg text-gray-600 max-w-none">
           <p className="mb-4">
             Founded with a vision to transform traditional fundraising methods, 
-            FunDrobe began as a simple idea: what if schools could generate 
+            FunDrobe began as a simple idea: what iff schools could generate 
             continuous funding while building community pride?
           </p>
           <p className="mb-4">

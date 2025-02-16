@@ -1,6 +1,5 @@
 import React from 'react';
 import { Heart, DollarSign, Users, Trophy } from 'lucide-react';
-import { DonorsReel } from '../components/DonorsReel';
 import { Footer } from '../components/Footer/Footer';
 
 const impactStats = [
@@ -140,7 +139,6 @@ export function Donate() {
         </div>
       </div>
 
-      <DonorsReel />
       <Footer />
     </div>
   );
