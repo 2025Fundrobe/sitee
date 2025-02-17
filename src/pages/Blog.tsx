@@ -4,7 +4,6 @@ import { SectionBackground } from '../components/common/SectionBackground';
 import { Footer } from '../components/Footer/Footer';
 import { BlogList } from '../components/blog/BlogList';
 import { PremiumContentTimer } from '../components/auth/PremiumContentTimer';
-import { DonateSection } from '../components/DonateSection';
 import { PremiumContentPopup } from '../components/blog/PremiumContentPopup';
 import { supabase } from '../lib/supabase';
 import type { Database } from '../types/supabase';
@@ -121,7 +120,6 @@ export function Blog() {
           </div>
         </SectionBackground>
       </div>
-      <DonateSection />
       <PremiumContentTimer />
       {showPremiumPopup && <PremiumContentPopup onClose={() => setShowPremiumPopup(false)} />}
       <Footer />

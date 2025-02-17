@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Lock, X, User, Mail, Key } from 'lucide-react';
+import { Lock, X, Mail, Key } from 'lucide-react';
 import { supabase } from '../../lib/supabase';
 
 interface PremiumContentPopupProps {
@@ -42,7 +42,7 @@ export function PremiumContentPopup({ onClose }: PremiumContentPopupProps) {
 
       onClose();
     } catch (error) {
-      setError(error.message);
+      setError((error as any).message);
     } finally {
       setLoading(false);
     }

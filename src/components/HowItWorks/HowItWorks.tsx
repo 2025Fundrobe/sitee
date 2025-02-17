@@ -3,8 +3,8 @@ import './HowItWorks.css'; // Import the CSS file for the shine effect
 
 export function HowItWorks() {
   return (
-    <section className="py-16 bg-gray-100" style={{ border: '4px solid #57c3e7' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="how-it-works-section"> {/* Apply the how-it-works-section class */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-12">
           <div className="inline-block bg-white border-4 border-[#57c3e7] p-9 rounded-lg shadow-lg w-full max-w-5xl mx-auto shine-box">
             <h2 className="text-5xl font-bold mb-4" style={{ color: '#000000' }}>

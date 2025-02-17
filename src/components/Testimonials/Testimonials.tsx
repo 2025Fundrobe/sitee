@@ -1,6 +1,5 @@
 import React from 'react';
-import { Circle } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { TestimonialCard } from './TestimonialCard';
 import { testimonials } from './testimonialData';
 import { SectionBackground } from '../common/SectionBackground';
@@ -19,12 +18,12 @@ export function Testimonials() {
     <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57c3e7]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="inline-block bg-white border-4 border-[#57c3e7] p-12 rounded-lg shadow-lg w-full max-w-6xl mx-auto shine-box">
+          <div className="inline-block bg-white border-8 border-[#57c3e7] p-12 rounded-lg shadow-lg w-full max-w-6xl mx-auto shine-box">
             <h2 className="text-5xl font-bold mb-10 flex items-center justify-center text-[#000000] testimonials-header">
-              🐝 Most Recent Buzz On Fundrobe 🐝
+              👨‍🏫 Elevate With Fellow Educators 👩‍🏫
             </h2>
-            <p className="text-center text-gray-600 mb-12 max-w-4xl mx-auto">
-             What are people saying about Fundrobe? Check out some of our most recent success stories below!
+            <p className="text-center text-gray-600 mb-12 max-w-5xl mx-auto">
+              Discover the seamlessness, ease, and freedom that these teachers in our community have experienced with Fundrobe. Read their stories and see how Fundrobe has transformed their fundraising efforts.
             </p>
           </div>
         </div>

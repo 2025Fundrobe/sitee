@@ -3,7 +3,7 @@ export const successStories = [
     id: 1,
     title: "Lady Warriors Soccer Program", 
     school: "Lincoln High School",
-    location: "Macon, GA - Coach Maria Ramirez",
+    location: "Coach Maria Ramirez",
     raised: "$52,000",
     imageUrl: "https://i.postimg.cc/N0Cspbm0/jeffrey-f-lin-zs4-Pahjo5ww-unsplash.jpg",
     instructorImage: "https://i.postimg.cc/4dhgwGX8/mo.webp",
@@ -19,16 +19,16 @@ export const successStories = [
     id: 2,
     title: "Ospreys AJROTC Program",
     school: "Riverside Academy",
-    location: "Richmond Hill, GA - TSgt David Hin",
+    location: "TSgt David White",
     raised: "$48,500",
     imageUrl: "https://i.postimg.cc/V61Q8VMg/Proper-AJROTC-COlor-Guard.jpg",
     instructorImage: "https://i.postimg.cc/wvVKTQQp/pexels-photo-7468086.webp",
     sections: {
-      backstory: "Under TSgt David Hin's leadership, the Ospresys AJROTC program at Riverside Academy sought to modernize their equipment and expand their cadet training opportunities. Through innovative fundraising approaches, they transformed their program's capabilities while strengthening their community bonds.",
-      challenge: "The Challenge 🛑\n\nThe Ospreys AJROTC program faced significant challenges with outdated equipment and limited resources for cadet development programs. Traditional fundraising methods weren't generating enough funds to meet their growing needs.\n\n\"Our cadets deserved better equipment and more opportunities,\" TSgt Hin recalls. \"But we were struggling to find sustainable funding solutions that didn't overwhelm our volunteers.\"",
-      solution: "The Solution 🔨\n\nTSgt Hin implemented a year-round merchandise program featuring:\n- Custom AJROTC-branded apparel\n- Seasonal collections\n- Community partnership initiatives\n- Student-led design competitions",
-      results: "The Results 📈\n\nThe program's success exceeded expectations:\n- Raised $48,500 in one year\n- Upgraded essential equipment\n- Enhanced cadet training programs\n- Strengthened community engagement\n- Increased cadet participation by 35%",
-      movingForward: "Our Future 🤝\n\nThe Ospreys AJROTC program continues to build on their success, setting new standards for cadet development and community involvement. Their sustainable funding model ensures future generations of cadets will have access to quality training and equipment."
+      backstory: "Under the dedicated leadership of Sergeant David White, the Ospreys JROTC program at Riverside Academy was determined to elevate its cadet training experience and modernize its resources. However, like many programs, they faced the challenge of limited funding and outdated equipment. Traditional fundraising efforts were time-consuming, labor-intensive, and often fell short of their goals. That’s when they discovered Fundrobe, a game-changing solution that transformed their fundraising efforts—and their program.",
+      challenge: "The Challenge 🛑\n\nThe Ospreys JROTC program was in dire need of updated equipment, improved training resources, and opportunities to engage their cadets in meaningful ways. Sergeant White knew that the program had the potential to thrive, but the lack of funds was holding them back.\n\n- ''Our cadets are passionate, driven, and eager to learn,'' said Sergeant White. ''But without the proper resources, we were limited in what we could offer them. We needed a fundraising solution that was simple, effective, and didn’t burden our volunteers or families.''",
+      solution: "The Solution 🔨\n\nSergeant White partnered with Fundrobe, a company that specializes in creating customized spirit wear with zero startup costs and zero hassle. Fundrobe worked closely with the Ospreys JROTC program to design a line of high-quality, custom-branded apparel that showcased the program’s pride and spirit.\n\nHere’s how Fundrobe made it happen:\n\n- Custom JROTC Apparel: Fundrobe designed a collection of JROTC-branded shirts, hoodies, hats, and more, featuring the Ospreys’ logo and cadet-inspired designs.\n\n- Online Store: Fundrobe set up an easy-to-use online store where families, alumni, and community members could purchase items year-round.\n\n- Zero Startup Costs: Unlike traditional fundraising methods, Fundrobe required no upfront investment, making it a risk-free solution for the program.\n\n- Community Engagement: The online store allowed the program to reach a wider audience, including alumni and local supporters, who were eager to show their pride and support.",
+      results: "The Results 📈\n\nThe impact of Fundrobe’s partnership with the Ospreys JROTC program was nothing short of transformative. Within the first year, the program achieved remarkable results:\n\n- Raised $52,000 in revenue, far surpassing their initial goals.\n\n- Upgraded Equipment: The funds allowed the program to purchase state-of-the-art training equipment, including new rifles, uniforms, and technology for their classrooms.\n\n- Enhanced Training Opportunities: With the additional resources, cadets gained access to advanced training programs, leadership workshops, and competitive events.\n\n- Increased Cadet Participation: The program saw a 40% increase in cadet enrollment, as more students were drawn to the improved opportunities and sense of pride in their JROTC program.\n\n- Strengthened Community Ties: The custom apparel became a symbol of unity, with cadets, families, and community members proudly wearing their Ospreys JROTC gear.",
+      movingForward: "Our Future 🤝\n\nThanks to Fundrobe's innovative approach, the Ospreys JROTC program has established a sustainable funding model that will benefit cadets for years to come. Sergeant White and his team are now focused on expanding their training programs, fostering leadership development, and continuing to build strong community connections.''Fundrobe made it so easy for us to raise the funds we needed without any stress or upfront costs,'' said Sergeant White. ''Their team was incredibly supportive, and the results speak for themselves. Our cadets now have the resources they need to succeed, and our program is stronger than ever.''"
     }
   },
   {
@@ -50,7 +50,7 @@ export const successStories = [
     id: 4,
     title: "Eagles Band Program",
     school: "Central High School",
-    location: "Savannah, GA - Mr. James Mitchell",
+    location: "Mr. James Mitchell",
     raised: "$56,000",
     imageUrl: "https://i.postimg.cc/Y9N9TWrg/band-bg.png",
     instructorImage: "https://i.postimg.cc/B63Z5nTv/band-pfp-1.png",
@@ -193,18 +193,4 @@ export const successStories = [
       movingForward: "Our Future 🤝\n\nLooking ahead, Chef Rodriguez plans to continue using the Fundrobe online store as a key part of the program's fundraising strategy. Several opportunities to expand the store’s reach are on the horizon:\n\n- Expanding Product Offerings: Chef Rodriguez intends to work with students to design additional products that tie into the program's growing needs. These could include specialized culinary tools, like engraved knives or recipe journals, and more seasonal items like holiday-themed aprons or culinary hats.\n\n- Collaborating with Local Businesses: The program is exploring partnerships with local food businesses that can provide sponsorship or offer products to feature in the store. For example, collaborating with a local bakery for branded rolling pins or aprons could be a unique fundraising opportunity, providing mutual benefits for both the school and the local business.\n\n- Targeted Fundraising Campaigns: Chef Rodriguez plans to run campaigns tied to specific events or achievements, such as fundraising for a culinary competition trip or to upgrade the kitchen’s equipment. These campaigns could offer special merchandise or discounts, creating excitement and encouraging supporters to engage more directly.\n\n- Building Alumni Support: Chef Rodriguez is also looking to increase alumni engagement through the store. By offering vintage program gear or creating a special alumni section of the store, past students could be encouraged to continue supporting the program financially while staying connected to its ongoing success.\n\n- Strengthening the School’s Culinary Culture: Moving forward, Chef Rodriguez hopes that the store will help strengthen the culinary culture at Piedmont High. She plans to host more community events where students showcase their culinary skills, and tie those events to merchandise sales, further expanding the store’s reach and impact."
     }
   },
-  {
-    id: 15,
-    title: "NJROTC Leadership",
-    school: "Maritime Academy",
-    location: "Tybee Island, GA - Commander John Stevens",
-    raised: "$53,000",
-    imageUrl: "https://i.postimg.cc/V61Q8VMg/njrotc-formation.jpg",
-    instructorImage: "https://i.postimg.cc/wvVKTQQp/njrotc-commander.jpg",
-    sections: {
-      backstory: "Commander John Stevens led the NJROTC program through a transformative fundraising journey, enabling them to enhance their training capabilities and leadership development initiatives.",
-      challenge: "The Challenge 🛑\n\nThe program faced significant expenses for uniforms, equipment, and training resources. Traditional fundraising methods weren't sufficient.\n\n\"We needed a sustainable funding solution to support our cadets' development,\" Commander Stevens explains.",
-      movingForward: "Our Future 🤝\n\nThe NJROTC program continues to develop future leaders while maintaining financial sustainability through their innovative fundraising approach."
-    }
-  }
 ];

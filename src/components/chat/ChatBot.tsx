@@ -147,7 +147,7 @@ export function ChatBot() {
         className="fixed bottom-6 right-6 p-0 bg-transparent rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group z-50 shine-effect"
       >
         <img 
-          src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
+          src="https://i.postimg.cc/yxnL5hFF/fundylogo-3.png"
           alt="Fundy AI"
           className="w-14 h-14 group-hover:scale-110 transition-transform"
         />
@@ -161,7 +161,7 @@ export function ChatBot() {
         <div className="flex items-center space-x-2">
           <div className="p-1">
             <img 
-              src="https://i.postimg.cc/6p3Gw8Th/fundy-transparent.png"
+              src="htthttps://i.postimg.cc/yxnL5hFF/fundylogo-3.png"
               alt="Fundy AI"
               className="w-10 h-10"
             />

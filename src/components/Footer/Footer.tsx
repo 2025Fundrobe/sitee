@@ -50,12 +50,11 @@ export function Footer() {
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-6">
-            <Link to="/about" onClick={handleAboutClick} className="text-gray-900 hover:text-white transition-colors">About</Link>
+
             <Link to="/blog" onClick={handleTipsClick} className="text-gray-900 hover:text-white transition-colors">Tips</Link>
             <Link to="/success" onClick={handleSuccessClick} className="text-gray-900 hover:text-white transition-colors">Success Stories</Link>
             <Link to="/about#careers" onClick={handleCareersClick} className="text-gray-900 hover:text-white transition-colors">Careers</Link>
             <Link to="/support" className="text-gray-900 hover:text-white transition-colors">Support</Link>
-            <Link to="/donate" className="text-gray-900 hover:text-white transition-colors">Donate</Link>
             <button 
               onClick={handleStartClick}
               className="bg-white text-[#57c3e7] px-4 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors"

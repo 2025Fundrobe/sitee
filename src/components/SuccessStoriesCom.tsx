@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SectionBackground } from './common/SectionBackground';
 import { StatsGrid } from './Stats';
-import { DonateSection } from './DonateSection';
 import { MapPin, School } from 'lucide-react';
 import { fetchSuccessStories } from '../lib/supabase';
 import { Footer } from './Footer/Footer';
@@ -22,6 +21,13 @@ interface SuccessStory {
     results: string;
     movingForward: string;
   };
+}
+
+interface Story {
+  title: string;
+  school: string;
+  instructor: string;
+  raised: string;
 }
 
 export function SuccessStories() {
@@ -52,6 +58,81 @@ export function SuccessStories() {
   if (loading) {
     return <div>Loading...</div>;
   }
+
+  const hardcodedValues: { [key: number]: Story } = {
+    1: {
+      title: "Lady Warriors Soccer Program",
+      school: "Lincoln High School",
+      instructor: "Coach Maria Ramirez",
+      raised: "$52,000"
+    },
+    2: {
+      title: "Ospreys AJROTC Program",
+      school: "Riverside Academy",
+      instructor: "TSgt David White",
+      raised: "$48,500"
+    },
+    3: {
+      title: "Rhythm & Motion Dance Company",
+      school: "Oakridge High School",
+      instructor: "Ms. Isabella Santos",
+      raised: "$45,000"
+    },
+    4: {
+      title: "Eagles Band Program",
+      school: "Central High School",
+      instructor: "Mr. James Mitchell",
+      raised: "$56,000"
+    },
+    5: {
+      title: "Panthers Basketball Program",
+      school: "Anderson High School",
+      instructor: "Coach Marcus Thompson",
+      raised: "$49,000"
+    },
+    7: {
+      title: "Hickory Ridge High School Robotics Team",
+      school: "Hickory Ridge High School",
+      instructor: "Dr. Robert Burner",
+      raised: "$58,000"
+    },
+    8: {
+      title: "Alhambra High School Girls Swim Team",
+      school: "Alhambra High School",
+      instructor: "Coach Lisa Martinez",
+      raised: "$31,000"
+    },
+    9: {
+      title: "Westwood High School Art Department",
+      school: "Westwood High School",
+      instructor: "Ms. Emily Wong",
+      raised: "$39,000"
+    },
+    10: {
+      title: "Oakmont Academy Chess Club",
+      school: "Oakmont Academy",
+      instructor: "Mr. David Park",
+      raised: "$28,000"
+    },
+    11: {
+      title: "Chaska High School Debate Team",
+      school: "Chaska High School",
+      instructor: "Ms. Jennifer Liu",
+      raised: "$41,000"
+    },
+    13: {
+      title: "Eastside Highschool Theatre",
+      school: "Eastside High School",
+      instructor: "Dr. Sarah Green",
+      raised: "$67,000"
+    },
+    14: {
+      title: "Piedmont High School Culinary Arts Team",
+      school: "Piedmont High School",
+      instructor: "Chef Maria Rodriguez",
+      raised: "$47,000"
+    }
+  };
 
   return (
     <>
@@ -108,7 +189,13 @@ export function SuccessStories() {
 
           <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
             {stories.map((story) => {
-              const [location, instructor] = story.location.split(' - ');
+              const { title, school, instructor, raised } = hardcodedValues[story.id] || story;
+
+              console.log(`Rendering story ID: ${story.id}`);
+              console.log(`Title: ${title}`);
+              console.log(`School: ${school}`);
+              console.log(`Instructor: ${instructor}`);
+              console.log(`Raised: ${raised}`);
 
               return (
                 <div 
@@ -118,21 +205,21 @@ export function SuccessStories() {
                 >
                   <img
                     src={story.imageUrl}
-                    alt={story.title}
+                    alt={title}
                     className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {story.title}
+                      {title}
                     </h3>
                     <div className="flex flex-col space-y-2">
                       <div className="flex items-center text-gray-600">
                         <School className="w-4 h-4 mr-2" />
-                        <span className="text-center flex-1">{story.school}</span>
+                        <span className="text-center flex-1">{school}</span>
                       </div>
                       <div className="flex items-center text-gray-600">
                         <MapPin className="w-4 h-4 mr-2" />
-                        <span className="text-center flex-1">{location}</span>
+                        <span className="text-center flex-1">{story.location}</span>
                       </div>
                     </div>
                     <div className="mt-4 flex flex-col items-center space-y-3">
@@ -140,7 +227,7 @@ export function SuccessStories() {
                         {instructor}
                       </div>
                       <div className="bg-[#5de0e6]/10 text-[#5de0e6] px-3 py-1 rounded-full font-medium">
-                        {story.raised}
+                        {raised}
                       </div>
                     </div>
                     <div className="mt-4">
@@ -157,7 +244,6 @@ export function SuccessStories() {
           </div>
         </div>
       </SectionBackground>
-      <DonateSection />
       <Footer />
     </>
   );

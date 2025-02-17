@@ -16,8 +16,8 @@ export function AboutBrand() {
             <div className="space-y-4 text-gray-600">
               <p className="text-lg">At Fundrobe Fundraising, we're dedicated to:</p>
               <ul className="list-disc pl-6 space-y-2 text-lg">
-                <li>Serving the local Savannah area, helping as many kids in the area achieve brighter futures As Soon As Possible</li>
-                <li>Supporting educational projects, sports teams, and fine arts groups through semester-long fundraising campaigns, ensuring every student has the opportunity to thrive beyond the classroom</li>
+                <li>Serving the Southeast United-States area, helping as many kids in the area achieve brighter futures As Soon As Possible.</li>
+                <li>Supporting educational projects, sports teams, and fine arts groups through semester-long fundraising campaigns, ensuring every student has the opportunity to thrive beyond the classroom.</li>
               </ul>
             </div>
           </div>

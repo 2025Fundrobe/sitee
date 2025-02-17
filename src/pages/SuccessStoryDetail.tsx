@@ -59,14 +59,14 @@ export function SuccessStoryDetail() {
                 <div className="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6 flex-1">
                   {/* Profile Picture with Frame */}
                   <div className="relative">
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[64px] sm:w-[124px] h-[64px] sm:h-[124px]">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[64px] sm:w-[124px] h-[64px] sm:h-[124px] z-10">
                       <img
-                        src="https://i.postimg.cc/cC8ckDzM/F-7.png"
+                        src="https://i.postimg.cc/c1V7xbJr/fundylogo-4.png"
                         alt=""
                         className="w-full h-full object-contain"
                       />
                     </div>
-                    <div className="relative z-10 w-12 h-12 sm:w-24 sm:h-24 rounded-full overflow-hidden">
+                    <div className="relative w-12 h-12 sm:w-24 sm:h-24 rounded-full overflow-hidden z-0">
                       <img
                         src={story.instructorImage}
                         alt={instructor}

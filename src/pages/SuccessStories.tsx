@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SectionBackground } from '../components/common/SectionBackground';
 import { StatsGrid } from '../components/Stats';
-import { DonateSection } from '../components/DonateSection';
 import { successStories } from '../data/successStories';
 import { Footer } from '../components/Footer/Footer';
 
@@ -77,7 +76,7 @@ export function SuccessStories() {
                     alt={story.title}
                     className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100">
+                  <div className="p-6 bg-gradient-to-r from-gray-50 to-gray-100 h-full">
                     <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
                       {story.title}
                     </h3>
@@ -101,7 +100,6 @@ export function SuccessStories() {
           </div>
         </div>
       </SectionBackground>
-      <DonateSection />
       <Footer />
     </>
   );

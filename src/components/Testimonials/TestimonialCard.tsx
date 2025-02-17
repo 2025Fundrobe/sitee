@@ -32,7 +32,7 @@ export function TestimonialCard({ quote, author, role, schoolName, imageUrl }: T
           {/* Decorative Frame */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[84px] h-[84px]">
             <img
-              src="https://i.postimg.cc/cC8ckDzM/F-7.png"
+              src="https://i.postimg.cc/c1V7xbJr/fundylogo-4.png"
               alt=""
               className="w-full h-full object-contain"
             />

@@ -20,7 +20,7 @@ const additionalFeatures = [
 
 export function Features() {
   return (
-    <SectionBackground className="py-20 bg-gray-100 border-4 border-[#57c3e7]"> {/* Updated outline color */}
+    <SectionBackground className="py-20 features-section"> {/* Apply the features-section class */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <div className="inline-block bg-white border-4 border-[#57c3e7] p-9 rounded-lg shadow-lg w-full max-w-5xl mx-auto shine-box"> {/* Updated outline color */}
